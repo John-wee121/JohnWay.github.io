@@ -6,15 +6,19 @@
   
   <title>tiny os | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="article">
+  <meta name="description" content="Tiny OS 目的：为了更好的了解RTOS以及拥有自己的RTOS参考教程   1.开发环境 操作系统：Windows11 开发平台：STM32F407VET6 编译工具：arm-gcc 编辑器：vscode 下载器：jlink   2.开发环境搭建 ……   3.知识点3.1 语言 1.C语言 2.汇编  3.2 Cortex-M系列开发手册 STM32F407VET6内核是Cortex-M4">
+<meta property="og:type" content="article">
 <meta property="og:title" content="tiny os">
 <meta property="og:url" content="http://example.com/2023/06/30/tiny-os/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Tiny OS 目的：为了更好的了解RTOS以及拥有自己的RTOS参考教程   1.开发环境 操作系统：Windows11 开发平台：STM32F407VET6 编译工具：arm-gcc 编辑器：vscode 下载器：jlink   2.开发环境搭建 ……   3.知识点3.1 语言 1.C语言 2.汇编  3.2 Cortex-M系列开发手册 STM32F407VET6内核是Cortex-M4">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2023/06/30/tiny-os/rtthread1.png">
 <meta property="article:published_time" content="2023-06-30T06:54:40.907Z">
-<meta property="article:modified_time" content="2023-06-30T06:55:04.921Z">
+<meta property="article:modified_time" content="2023-06-30T09:34:24.134Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/06/30/tiny-os/rtthread1.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -95,7 +99,104 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <h1 id="Tiny-OS"><a href="#Tiny-OS" class="headerlink" title="Tiny OS"></a>Tiny OS</h1><blockquote>
+<p>目的：为了更好的了解RTOS以及拥有自己的RTOS<br><a target="_blank" rel="noopener" href="https://space.bilibili.com/314566606">参考教程</a></p>
+</blockquote>
+<hr>
+<h2 id="1-开发环境"><a href="#1-开发环境" class="headerlink" title="1.开发环境"></a>1.开发环境</h2><ul>
+<li>操作系统：Windows11</li>
+<li>开发平台：STM32F407VET6</li>
+<li>编译工具：arm-gcc</li>
+<li>编辑器：vscode</li>
+<li>下载器：jlink<!-- <img src="rtthread1.png"> --></li>
+</ul>
+<hr>
+<h2 id="2-开发环境搭建"><a href="#2-开发环境搭建" class="headerlink" title="2.开发环境搭建"></a>2.开发环境搭建</h2><blockquote>
+<p>……</p>
+</blockquote>
+<hr>
+<h2 id="3-知识点"><a href="#3-知识点" class="headerlink" title="3.知识点"></a>3.知识点</h2><h3 id="3-1-语言"><a href="#3-1-语言" class="headerlink" title="3.1 语言"></a>3.1 语言</h3><ul>
+<li>1.C语言</li>
+<li>2.汇编</li>
+</ul>
+<h3 id="3-2-Cortex-M系列开发手册"><a href="#3-2-Cortex-M系列开发手册" class="headerlink" title="3.2 Cortex-M系列开发手册"></a>3.2 Cortex-M系列开发手册</h3><ul>
+<li>STM32F407VET6内核是Cortex-M4</li>
+</ul>
+<h3 id="3-3-数据结构"><a href="#3-3-数据结构" class="headerlink" title="3.3 数据结构"></a>3.3 数据结构</h3><ul>
+<li>1.链表（双向链表）</li>
+<li>2.队列</li>
+</ul>
+<h3 id="3-4-了解RTOS（会使用一种RTOS）"><a href="#3-4-了解RTOS（会使用一种RTOS）" class="headerlink" title="3.4 了解RTOS（会使用一种RTOS）"></a>3.4 了解RTOS（会使用一种RTOS）</h3><ul>
+<li>1.线程间同步（信号量与互斥量）</li>
+<li>2.线程间通信（消息队列）</li>
+<li>3.软件定时器（阻塞工作，改成非阻塞）</li>
+</ul>
+<h3 id="3-5-调试"><a href="#3-5-调试" class="headerlink" title="3.5 调试"></a>3.5 调试</h3><ul>
+<li>1.GDB调试工具等</li>
+</ul>
+<hr>
+<h2 id="4-能力"><a href="#4-能力" class="headerlink" title="4.能力"></a>4.能力</h2><h3 id="4-1-代码量"><a href="#4-1-代码量" class="headerlink" title="4.1 代码量"></a>4.1 代码量</h3><ul>
+<li>1.参考别人高质量代码。参考：linux内核源码，rtthread源码</li>
+</ul>
+<h3 id="4-2-解决问题的能力"><a href="#4-2-解决问题的能力" class="headerlink" title="4.2 解决问题的能力"></a>4.2 解决问题的能力</h3><ul>
+<li>1.多写多调式</li>
+</ul>
+<hr>
+<h2 id="5-步骤"><a href="#5-步骤" class="headerlink" title="5.步骤"></a>5.步骤</h2><h3 id="5-1-操作系统原理"><a href="#5-1-操作系统原理" class="headerlink" title="5.1 操作系统原理"></a>5.1 操作系统原理</h3><ul>
+<li>1.理论部分</li>
+</ul>
+<h4 id="5-1-1-什么是操作系统"><a href="#5-1-1-什么是操作系统" class="headerlink" title="5.1.1 什么是操作系统"></a>5.1.1 什么是操作系统</h4><blockquote>
+<p>OS(Operation System),管理计算机硬件和软件资源的系统软件</p>
+</blockquote>
+<ul>
+<li>1.可以尽可能的有效利用单片机的硬件资源</li>
+<li>2.可以高效的运行和处理我们的业务逻辑</li>
+</ul>
+<h4 id="5-1-2-使用RTOS"><a href="#5-1-2-使用RTOS" class="headerlink" title="5.1.2 使用RTOS"></a>5.1.2 使用RTOS</h4><h5 id="5-1-2-1-无OS"><a href="#5-1-2-1-无OS" class="headerlink" title="5.1.2.1 无OS"></a>5.1.2.1 无OS</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">task0</span><span class="params">(<span class="type">void</span> *_parameter)</span></span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">task1</span><span class="params">(<span class="type">void</span> *_parameter)</span></span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">task2</span><span class="params">(<span class="type">void</span> *_parameter)</span></span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">/* dosomething */</span></span><br><span class="line">        task0();</span><br><span class="line">        task1();</span><br><span class="line">        task2();</span><br><span class="line">        <span class="comment">/* ... */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="5-1-2-2-OS"><a href="#5-1-2-2-OS" class="headerlink" title="5.1.2.2 OS"></a>5.1.2.2 OS</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">task0</span><span class="params">(<span class="type">void</span> *_parameter)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">task1</span><span class="params">(<span class="type">void</span> *_parameter)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">task2</span><span class="params">(<span class="type">void</span> *_parameter)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    tos_init();</span><br><span class="line"></span><br><span class="line">    tos_thread_create(task0);</span><br><span class="line">    tos_thread_create(task1);</span><br><span class="line">    tos_thread_create(task2);</span><br><span class="line"></span><br><span class="line">    tos_start();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">/* dosomething */</span></span><br><span class="line">        <span class="comment">/* ... */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-1-3-调度器"><a href="#5-1-3-调度器" class="headerlink" title="5.1.3 调度器"></a>5.1.3 调度器</h4><h5 id="5-1-3-1-合作式调度器"><a href="#5-1-3-1-合作式调度器" class="headerlink" title="5.1.3.1 合作式调度器"></a>5.1.3.1 合作式调度器</h5><blockquote>
+<p>有点像：</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        task0();</span><br><span class="line">        task1();</span><br><span class="line">        task2();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这里的线程是不存在抢占的，必须等到其他线程释放CPU控制权后，另外线程才能获取到CPU控制权运行。<br>有点像前后台</p>
+</blockquote>
+<h5 id="5-1-3-2-抢占式调度器"><a href="#5-1-3-2-抢占式调度器" class="headerlink" title="5.1.3.2 抢占式调度器"></a>5.1.3.2 抢占式调度器</h5><ul>
+<li>1.每个线程都有对应的优先级</li>
+<li>2.最高优先级的任务一旦就绪，总是可以得到CPU的控制权</li>
+</ul>
+<blockquote>
+<p>存在问题：高优先级线程不释放CPU控制权的话，低优先级线程则永远都得不到CPU控制权运行。</p>
+</blockquote>
+<h5 id="5-1-3-3-时间片调度器"><a href="#5-1-3-3-时间片调度器" class="headerlink" title="5.1.3.3 时间片调度器"></a>5.1.3.3 时间片调度器</h5><ul>
+<li><ol>
+<li><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">task0</span><span class="params">(<span class="type">void</span> *_parameter)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        delay(<span class="number">100</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">task1</span><span class="params">(<span class="type">void</span> *_parameter)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        delay(<span class="number">200</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">task2</span><span class="params">(<span class="type">void</span> *_parameter)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// delay(300);</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    tos_init();</span><br><span class="line"></span><br><span class="line">    tos_thread_create(task0);</span><br><span class="line">    tos_thread_create(task1);</span><br><span class="line">    tos_thread_create(task2);</span><br><span class="line"></span><br><span class="line">    tos_start();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">/* dosomething */</span></span><br><span class="line">        <span class="comment">/* ... */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>存在问题：若线程像task2这样没有delay释放CPU控制权，则当前线程会一直占用CPU，其他线程则无法运行。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="5-1-4-线程管理"><a href="#5-1-4-线程管理" class="headerlink" title="5.1.4 线程管理"></a>5.1.4 线程管理</h4><ul>
+<li>1.线程状态</li>
+<li>2.线程间通信</li>
+<li>3.线程间同步</li>
+</ul>
+<h4 id="5-1-5-时间管理"><a href="#5-1-5-时间管理" class="headerlink" title="5.1.5 时间管理"></a>5.1.5 时间管理</h4><ul>
+<li>1.软件定时器</li>
+<li>2.休眠管理</li>
+</ul>
+<h3 id="5-2-汇编语言"><a href="#5-2-汇编语言" class="headerlink" title="5.2 汇编语言"></a>5.2 汇编语言</h3><ul>
+<li>1.RTOS中会使用到的汇编</li>
+</ul>
+<h3 id="5-3-jlink"><a href="#5-3-jlink" class="headerlink" title="5.3 jlink"></a>5.3 jlink</h3><h3 id="5-4-代码实现"><a href="#5-4-代码实现" class="headerlink" title="5.4 代码实现"></a>5.4 代码实现</h3><ul>
+<li>1.内核调度</li>
+<li>2.线程间管理</li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
