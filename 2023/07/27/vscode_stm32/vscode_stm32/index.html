@@ -101,17 +101,17 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h1><ul>
+        <h1><span id="开发环境">开发环境</span></h1><ul>
 <li>系统：window11</li>
 <li>硬件：FK407M2-ZGT6(stm32f407zgt6)</li>
 <li>调试器：jlink-ob(swd)</li>
 <li>软件：vscode</li>
 </ul>
-<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul>
+<h1><span id="参考链接">参考链接</span></h1><ul>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/cqy1028/article/details/113984775">Win10配置 STM32&#x2F;GD32 单片机 GCC+VScode 编译调试总结 2021版</a></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45467056/article/details/119886361">解决openocd无法识别jlink的问题LIBUSB_ERROR_NOT_SUPPORTED</a></li>
 </ul>
-<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><ul>
+<h1><span id="注意">注意</span></h1><ul>
 <li>调试配置(launch.json)</li>
 </ul>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="comment">// 使用 IntelliSense 了解相关属性。 </span></span><br><span class="line">    <span class="comment">// 悬停以查看现有属性的描述。</span></span><br><span class="line">    <span class="comment">// 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Cortex Debug&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;cwd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceFolder&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;executable&quot;</span><span class="punctuation">:</span> <span class="string">&quot;./build/FK407M2-ZGT6.elf&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cortex-debug&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;runToEntryPoint&quot;</span><span class="punctuation">:</span> <span class="string">&quot;main&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;servertype&quot;</span><span class="punctuation">:</span> <span class="string">&quot;openocd&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;interface&quot;</span><span class="punctuation">:</span> <span class="string">&quot;swd&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;device&quot;</span><span class="punctuation">:</span> <span class="string">&quot;STM32F407ZGT6&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;configFiles&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="string">&quot;jlink.cfg&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;stm32f4x.cfg&quot;</span></span><br><span class="line">            <span class="punctuation">]</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
@@ -128,14 +128,14 @@
 <li>stm32f4x.cfg默认路径 “你的安装目录\OpenOCD\share\openocd\scripts\target\stm32f4x.cfg”</li>
 <li>这两个文件我直接copy到工程目录下，所以launch.json中configFiles直接写名字（相对路径），也可以写绝对路径</li>
 </ul>
-<h1 id="工程文件"><a href="#工程文件" class="headerlink" title="工程文件"></a>工程文件</h1><ul>
+<h1><span id="工程文件">工程文件</span></h1><ul>
 <li><a target="_blank" rel="noopener" href="https://gitee.com/wlx_a/fk407-m2-zgt6.git">FK407M2-ZGT6工程</a></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/07/27/vscode_stm32/vscode_stm32/" data-id="cll2kgrqq0005f8c71yi78k67" data-title="vscode stm32 开发调试" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/07/27/vscode_stm32/vscode_stm32/" data-id="cll2nturp000254c7a13udqd5" data-title="vscode stm32 开发调试" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
